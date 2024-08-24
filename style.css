@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: gilory;
+    font-family: aeonik;
 }
 
 html,
@@ -90,5 +90,9 @@ body{
     left: 40%;
     transform: translate(-50%,-50%);
     color: #fff;
+   
+}
+
+#title h1 span{
     display: inline-block;
 }

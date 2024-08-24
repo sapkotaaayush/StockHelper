@@ -46,10 +46,10 @@ cross.addEventListener("click",function(){
 })
 
 
-gsap.from("h1 span", {
-    y: 100,
+gsap.from("#title h1 span", {
+    y: 50,
     opacity: 0,
-    duration:1,
+    duration:0.8,
     delay: 0.5,
-    stagger:0.3,
+    stagger:0.15,
 })
