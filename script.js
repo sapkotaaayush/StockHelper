@@ -7,13 +7,21 @@ function splitTheText(){
     h1Text = h1.textContent
 
     var clutter = ""
+
 var splittedText = h1Text.split("")
-console.log(splittedText)
-    splittedText.forEach(function(letters){
-        console.log(letters)
-        clutter += `<span>${letters}</span>`
+var halfText = splittedText.length/2
+console.log(halfText)
+
+
+    splittedText.forEach(function(letters , index){
+        if(index < halfText) {
+        clutter += `<span class = "firstSplit" >${letters}</span>`
+        }
+        else{
+              clutter += `<span class = "secondSplit" >${letters}</span>`
+        }
     })
-    console.log(clutter)
+  
     h1.innerHTML =  clutter
 }
 
@@ -46,10 +54,19 @@ cross.addEventListener("click",function(){
 })
 
 
-gsap.from("#title h1 span", {
+gsap.from("h1 .firstSplit", {
     y: 50,
     opacity: 0,
     duration:0.8,
-    delay: 0.5,
+    delay: 0.35,
     stagger:0.15,
 })
+
+gsap.from("h1 .secondSplit", {
+    y: -50,
+    opacity: 0,
+    duration:0.8,
+    delay: 0.75,
+    stagger:0.15,
+})
+
