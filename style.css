@@ -39,6 +39,7 @@ body{
 #nav i{
     font-size: 30px;
     font-weight: 800;
+    cursor: pointer;
 }
 
 #full{
@@ -68,4 +69,5 @@ body{
     top: 5%;
     right: 10%;
     padding: 5px;
+    cursor: pointer;
 }
